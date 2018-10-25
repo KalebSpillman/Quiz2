@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,95 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IosQuiz2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07k-pW-UH5">
+                                <rect key="frame" x="100" y="70" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-QR-pf2">
+                                <rect key="frame" x="100" y="161" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdt-5q-dvd">
+                                <rect key="frame" x="100" y="272" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbm-8l-6by">
+                                <rect key="frame" x="100" y="617" width="175" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UA5-6Y-MTO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y23-x6-GBP">
+                                <rect key="frame" x="100" y="116" width="175" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krI-66-K0m">
+                                <rect key="frame" x="100" y="207" width="175" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-hz-B7D">
+                                <rect key="frame" x="100" y="318" width="175" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vbm-8l-6by" secondAttribute="trailing" constant="100" id="4cv-0u-71t"/>
+                            <constraint firstItem="krI-66-K0m" firstAttribute="top" secondItem="xcT-QR-pf2" secondAttribute="bottom" constant="45" id="5Lx-Pi-mhe"/>
+                            <constraint firstItem="xcT-QR-pf2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="8gi-aj-N5j"/>
+                            <constraint firstItem="xcT-QR-pf2" firstAttribute="top" secondItem="07k-pW-UH5" secondAttribute="bottom" constant="70" id="9x9-WB-0Uu"/>
+                            <constraint firstItem="07k-pW-UH5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="AoR-fi-CYE"/>
+                            <constraint firstItem="y23-x6-GBP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="CtB-6j-7tC"/>
+                            <constraint firstItem="07k-pW-UH5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="IND-iN-WXX"/>
+                            <constraint firstItem="AFv-hz-B7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Jam-lT-eNv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="07k-pW-UH5" secondAttribute="trailing" constant="100" id="LYM-bI-hK4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="krI-66-K0m" secondAttribute="trailing" constant="100" id="R7f-Wh-I0R"/>
+                            <constraint firstItem="vbm-8l-6by" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Sxv-K3-z3a"/>
+                            <constraint firstItem="AFv-hz-B7D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ViL-fx-6SM"/>
+                            <constraint firstItem="krI-66-K0m" firstAttribute="top" secondItem="xcT-QR-pf2" secondAttribute="bottom" constant="25" id="Xel-jx-TfJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vbm-8l-6by" secondAttribute="bottom" constant="20" id="cGT-Wq-bqR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AFv-hz-B7D" secondAttribute="trailing" constant="100" id="ftr-4T-KOi"/>
+                            <constraint firstItem="krI-66-K0m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="leO-wr-BM7"/>
+                            <constraint firstItem="AFv-hz-B7D" firstAttribute="top" secondItem="Rdt-5q-dvd" secondAttribute="bottom" constant="65" id="omy-vv-Gtg"/>
+                            <constraint firstItem="AFv-hz-B7D" firstAttribute="top" secondItem="Rdt-5q-dvd" secondAttribute="bottom" constant="25" id="q9c-aB-ouu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AFv-hz-B7D" secondAttribute="trailing" constant="100" id="thB-e0-I4T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xcT-QR-pf2" secondAttribute="trailing" constant="100" id="tvf-no-mw1"/>
+                            <constraint firstItem="Rdt-5q-dvd" firstAttribute="top" secondItem="xcT-QR-pf2" secondAttribute="bottom" constant="90" id="uDi-b1-4Aj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y23-x6-GBP" secondAttribute="trailing" constant="100" id="uiI-kg-EMX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rdt-5q-dvd" secondAttribute="trailing" constant="100" id="wwi-RV-kJc"/>
+                            <constraint firstItem="Rdt-5q-dvd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="yV6-HA-LWW"/>
+                            <constraint firstItem="y23-x6-GBP" firstAttribute="top" secondItem="07k-pW-UH5" secondAttribute="bottom" constant="25" id="zav-h0-pN8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="AFv-hz-B7D" id="3N7-Qh-8dr"/>
+                        <outlet property="firstNameTextField" destination="y23-x6-GBP" id="aMS-Ee-TiY"/>
+                        <outlet property="lastNameTextField" destination="krI-66-K0m" id="nJK-UM-OVN"/>
+                        <outlet property="submitButton" destination="vbm-8l-6by" id="W0O-xc-daX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
